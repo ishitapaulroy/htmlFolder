@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    button{
+        cursor: pointer;
+    }
+    .nobg{
+        background: none;
+        border: none;
+    }
+    a{
+        text-decoration: none;
+        &:hover{
+            outline: none;
+        }
+    }
+}
+.profile{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 2px;
+    background: #F7F8FA;
+    position: relative;
+    
+    .round{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        padding: 2px;
+        background: #F7F8FA;
+        background: linear-gradient(90deg, #F7F8FA 16%, #3B82F6 16%);   
+        animation: makeRound 2s infinite;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        position: relative;
+        z-index: 2;
+    }
+}
+@keyframes makeRound {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
+.offline{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 0px;
+    bottom: 0px;
+    background: #EF4444;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(96, 108, 128, 0.05);
+    border-radius: 100px;
+    z-index: 2;
+    &.on{
+        background: #22C55E;
+    }
+}  
+.number{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    min-width: 19px;
+    padding: 0 3px;
+    height: 20px;
+    right: -4px;
+    top: -4px;
+    background: #EF4444;
+    box-shadow: 0px 1px 3px rgba(239, 68, 68, 0.2);
+    border-radius: 12px; 
+    font-size: 10px;
+    color: #fff;
+    z-index: 2;
+}
+
+  div::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  div::-webkit-scrollbar-track {
+    background-color: #dce4eb;
+  }
+  
+  div::-webkit-scrollbar-thumb {
+    background-color: #f1a668;
+  }
+  .tag{
+    padding: 5px 8px;
+    gap: 10px;
+    height: 20px;
+    border-radius: 16px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 3px;
+    font-weight: 800;
+    font-size: 8px;
+    line-height: 11px;
+  }
+  .showNumber{
+    width: 38px;
+    height: 38px;
+    background: #F2F4F7;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-left: -18px;
+    position: relative;
+    z-index: 2;
+    color: #606C80;
+    font-size: 12px;
+    text-align: center;
+    line-height: 37px;
+    font-weight: bold;
+}
+.addBtn{
+    width: 40px;
+    height: 40px;
+    line-height: 43px;
+    background: #FFFFFF;
+    border: 2px dashed #EBEEF2;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 0 0 15px;
+}
+  .nocolor{
+    background: #FFFFFF;
+    border: 1px solid #EBEEF2;
+    color: #606C80;
+  }
+  .yellow{
+    background: rgba(234, 179, 8, 0.1);
+    color: #CA8A04;
+  }
+  .blue{
+    background: rgba(59, 130, 246, 0.1);
+    color: #2563EB;
+  }
+  .blue{
+    background: rgba(59, 130, 246, 0.1);
+    color: #2563EB;
+  }
+  .red{
+    background: rgba(236, 72, 153, 0.1);
+    color:#DB2777;
+  }
+  .purple{
+    background: rgba(168, 85, 247, 0.1);
+    color:#9333EA;
+  }
+  .green{
+    background: rgba(34, 197, 94, 0.1);
+    color: #16A34A;
+  }
+  .scrollDiv{
+    max-height: calc(100Vh - 200px);
+    overflow: auto;
+  }
